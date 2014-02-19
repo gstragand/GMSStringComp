@@ -1,4 +1,4 @@
-String comparision classes for Fuzzy String Matching
+String comparison classes for Fuzzy String Matching
 ================================
 
 Java implementation of Levenshtein's edit distance algorithm (http://en.wikipedia.org/wiki/Levenshtein_distance) with a small tweak to return a percentage as a match value.

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Dice
 {
-    public double dice(String str1, String str2)
+    public double compare (String str1, String str2)
     {
         return dice(bigram(str1), bigram(str2));
 

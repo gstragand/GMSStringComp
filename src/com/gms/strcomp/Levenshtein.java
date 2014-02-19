@@ -9,6 +9,7 @@
  */
 package com.gms.strcomp;
 
+@SuppressWarnings("WeakerAccess")
 public class Levenshtein
 {
     public double compare(final String s1, final String s2)
