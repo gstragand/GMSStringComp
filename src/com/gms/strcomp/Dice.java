@@ -2,9 +2,6 @@
  * Dice.java
  *
  * Copyright 2014 George M. Stragand III.  All Rights Reserved.
- *
- * This software is the proprietary information of George M. Stragand III.
- * Use is subject to license terms.
  */
 package com.gms.strcomp;
 
@@ -13,7 +10,7 @@ import java.util.List;
 
 public class Dice
 {
-    public double compare (String str1, String str2)
+    public double compare(String str1, String str2)
     {
         return dice(bigram(str1), bigram(str2));
 
@@ -47,7 +44,7 @@ public class Dice
         {
             char[] chars = new char[2];
             chars[0] = input.charAt(i);
-            chars[1] = input.charAt(i+1);
+            chars[1] = input.charAt(i + 1);
             bigram.add(chars);
         }
         return bigram;

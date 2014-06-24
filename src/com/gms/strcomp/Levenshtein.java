@@ -2,9 +2,6 @@
  * Levenshtein.java
  *
  * Copyright 2014 George M. Stragand III.  All Rights Reserved.
- *
- * This software is the proprietary information of George M. Stragand III.
- * Use is subject to license terms.
  */
 package com.gms.strcomp;
 
