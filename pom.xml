@@ -66,4 +66,5 @@
 			<timezone>-7</timezone>
 		</developer>
 	</developers>
+	<name>String and document matching</name>
 </project>
