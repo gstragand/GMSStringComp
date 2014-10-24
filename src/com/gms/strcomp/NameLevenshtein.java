@@ -20,7 +20,7 @@ public class NameLevenshtein
 
     private static final String tokenizeAndSort(final String name)
     {
-        String[] arrayName = name.split(" ");
+        String[] arrayName = name.split(SPACE);
         Arrays.sort(arrayName);
         StringBuilder nameSorted = new StringBuilder(arrayName[0]);
         for (int i = 1; i < arrayName.length; i++)
