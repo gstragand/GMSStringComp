@@ -18,7 +18,7 @@ public class NameLevenshtein
         return super.compare(tokenizeAndSort(name1), tokenizeAndSort(name2));
     }
 
-    private static final String tokenizeAndSort(final String name)
+    private static String tokenizeAndSort(final String name)
     {
         String[] arrayName = name.split(SPACE);
         Arrays.sort(arrayName);
