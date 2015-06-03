@@ -23,10 +23,10 @@ public class JaccardDistance
 
     private double dissimilarity(List<String> left, List<String> right)
     {
-        Set<String> union = new HashSet<String>(left);
+        Set<String> union = new HashSet<>(left);
         union.addAll(right);
 
-        Set<String> intersection = new HashSet<String>(left);
+        Set<String> intersection = new HashSet<>(left);
         intersection.retainAll(right);
 
         return 1.0 - ((double) intersection.size() / union.size());

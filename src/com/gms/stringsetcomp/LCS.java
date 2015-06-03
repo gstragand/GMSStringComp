@@ -34,7 +34,7 @@ public class LCS
                 else
                     lengths[i + 1][j + 1] = Math.max(lengths[i + 1][j], lengths[i][j + 1]);
 
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
         for (int i = lSize, j = rSize; i != 0 && j != 0;)
         {
             if (lengths[i][j] == lengths[i - 1][j])

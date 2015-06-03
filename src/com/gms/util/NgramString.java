@@ -24,8 +24,8 @@ public class NgramString
 
     public String[] buildNgram(String[] input)
     {
-        Collection<String> output = new ArrayList<String>();
-        StringBuffer buffy = new StringBuffer();
+        Collection<String> output = new ArrayList<>();
+        StringBuilder buffy = new StringBuilder();
         for (int i = 0; i < input.length + 1 - ngramSize; i++)
         {
             buffy.setLength(0);

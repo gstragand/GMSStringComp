@@ -37,10 +37,10 @@ public class WShingling
         List<String> leftNgram = Arrays.asList(ngram.buildNgram(left));
         List<String> rightNgram = Arrays.asList(ngram.buildNgram(right));
 
-        Set<String> intersection = new HashSet<String>(leftNgram);
+        Set<String> intersection = new HashSet<>(leftNgram);
         intersection.retainAll(rightNgram);
 
-        Set<String> union = new HashSet<String>(leftNgram);
+        Set<String> union = new HashSet<>(leftNgram);
         union.addAll(rightNgram);
 
         return 1.0 - ((double) intersection.size() / union.size());
