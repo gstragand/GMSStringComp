@@ -1,7 +1,7 @@
 /*
  * Levenshtein.java
  *
- * Copyright 2014 George M. Stragand III.  All Rights Reserved.
+ * Copyright 2018 George M. Stragand III.  All Rights Reserved.
  */
 package com.gms.strcomp;
 
@@ -9,22 +9,13 @@ public class Levenshtein
 {
     public double compare(final String s1, final String s2)
     {
-        double value;
         final int n = s1.length();
         final int m = s2.length();
         if (0 == n)
-        {
-            value = m;
-        }
-        else if (0 == m)
-        {
-            value = n;
-        }
-        else
-        {
-            value = 1.0 - (compare(s1, n, s2, m) / (Math.max(n, m)));
-        }
-        return value;
+            return m;
+        if (0 == m)
+            return n;
+        return 1.0 - (compare(s1, n, s2, m) / (Math.max(n, m)));
     }
 
     private double compare(final String s1, final int n, final String s2, final int m)
