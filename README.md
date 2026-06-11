@@ -8,4 +8,4 @@ Java implementation of Dice Coefficient (http://en.wikipedia.org/wiki/S%C3%B8ren
 100% (1.0) is an exact match, 0% is completely different.
 
 ### Author
-* George Stragand ( http://www.georgestragand.com )
+* George Stragand (https://www.linkedin.com/in/georgestragand/)
