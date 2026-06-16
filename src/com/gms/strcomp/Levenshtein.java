@@ -21,14 +21,8 @@ public class Levenshtein
     private double compare(final String s1, final int n, final String s2, final int m)
     {
         int matrix[][] = new int[n + 1][m + 1];
-        for (int i = 0; i <= n; i++)
-        {
-            matrix[i][0] = i;
-        }
-        for (int i = 0; i <= m; i++)
-        {
-            matrix[0][i] = i;
-        }
+        for (int i = 0; i <= n; i++) matrix[i][0] = i;
+        for (int i = 0; i <= m; i++) matrix[0][i] = i;
 
         for (int i = 1; i <= n; i++)
         {
@@ -37,14 +31,13 @@ public class Levenshtein
             {
                 final int s2j = s2.codePointAt(j - 1);
                 final int cost = s1i == s2j ? 0 : 1;
-                matrix[i][j] = min3(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+                final int m1 = matrix[i - 1][j] + 1;
+                final int m2 = matrix[i][j - 1] + 1;
+                final int m3 = matrix[i - 1][j - 1] + cost;
+                final int min = m1 < m2 ? m1 : m2;
+                matrix[i][j] = min < m3 ? min : m3;
             }
         }
         return matrix[n][m];
-    }
-
-    private int min3(final int a, final int b, final int c)
-    {
-        return Math.min(Math.min(a, b), c);
     }
 }
